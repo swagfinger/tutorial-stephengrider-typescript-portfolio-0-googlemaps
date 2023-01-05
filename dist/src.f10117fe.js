@@ -136876,17 +136876,12 @@ var __importDefault = this && this.__importDefault || function (mod) {
     "default": mod
   };
 };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.User = void 0;
-
 var faker_1 = __importDefault(require("faker"));
-
-var User =
-/** @class */
-function () {
+var User = /** @class */function () {
   function User() {
     this.name = faker_1.default.name.firstName();
     this.location = {
@@ -136894,14 +136889,11 @@ function () {
       lng: parseFloat(faker_1.default.address.longitude())
     };
   }
-
   User.prototype.markerContent = function () {
     return "user Name: ".concat(this.name);
   };
-
   return User;
 }();
-
 exports.User = User;
 },{"faker":"node_modules/faker/index.js"}],"src/Company.ts":[function(require,module,exports) {
 "use strict";
@@ -136911,17 +136903,12 @@ var __importDefault = this && this.__importDefault || function (mod) {
     "default": mod
   };
 };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Company = void 0;
-
 var faker_1 = __importDefault(require("faker"));
-
-var Company =
-/** @class */
-function () {
+var Company = /** @class */function () {
   function Company() {
     this.name = faker_1.default.company.companyName();
     this.catchPhrase = faker_1.default.company.catchPhrase();
@@ -136930,14 +136917,11 @@ function () {
       lng: parseFloat(faker_1.default.address.longitude())
     };
   }
-
   Company.prototype.markerContent = function () {
     return "\n    <h1>Company Name: ".concat(this.name, "</h1>\n    <h3>CatchPhrase ").concat(this.catchPhrase, "</h3>\n    ");
   };
-
   return Company;
 }();
-
 exports.Company = Company;
 },{"faker":"node_modules/faker/index.js"}],"src/CustomMap.ts":[function(require,module,exports) {
 "use strict";
@@ -136946,10 +136930,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.CustomMap = void 0;
-
-var CustomMap =
-/** @class */
-function () {
+var CustomMap = /** @class */function () {
   function CustomMap(divId) {
     this.googleMap = new google.maps.Map(document.getElementById(divId), {
       zoom: 1,
@@ -136959,10 +136940,8 @@ function () {
       }
     });
   }
-
   CustomMap.prototype.addMarker = function (mappable) {
     var _this = this;
-
     var marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
@@ -136977,11 +136956,9 @@ function () {
       infoWindow.open(_this.googleMap, marker);
     });
   };
-
   ;
   return CustomMap;
 }();
-
 exports.CustomMap = CustomMap;
 },{}],"src/index.ts":[function(require,module,exports) {
 "use strict";
@@ -136989,13 +136966,9 @@ exports.CustomMap = CustomMap;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
 var User_1 = require("./User");
-
 var Company_1 = require("./Company");
-
 var CustomMap_1 = require("./CustomMap");
-
 var user = new User_1.User();
 console.log(user);
 var company = new Company_1.Company();
@@ -137028,7 +137001,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61027" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55330" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
